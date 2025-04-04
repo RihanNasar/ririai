@@ -21,7 +21,7 @@ const App = () => {
         {/* Logo and Bird Image Section */}
         <div className="w-full max-w-6xl mx-auto px-12 flex mb-12">
           {/* Left Section - Logo */}
-          <div className="w-1/2 flex flex-col items-start justify-center">
+          <div className="w-3/4 flex flex-col items-start justify-center">
             {/* RIRIAI Logo */}
             <div>
               <img src={riri} alt="RIRIAI Logo" className="h-28" />
@@ -47,18 +47,21 @@ const App = () => {
         </div>
 
         {/* Input Form Section - Just below the logo and bird */}
-        <div className="w-full max-w-6xl mx-auto ">
-          <form onSubmit={handleSubmit} className="flex gap-4">
+        <div className="w-full max-w-6xl mx-auto flex justify-center">
+          <form
+            onSubmit={handleSubmit}
+            className="flex gap-16 w-full justify-start"
+          >
             <input
               type="text"
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               placeholder="eg: A soft acoustic guitar playing in the background with a hint of lo-fi beats"
-              className="w-3/5  bg-transparent border border-gray-600 rounded-md !px-6 !py-4 text-white focus:outline-none focus:border-blue-500 font-light"
+              className="w-2/3 bg-transparent border border-gray-600 rounded-md !px-6 !py-4 text-white focus:outline-none focus:border-blue-500 font-light"
             />
             <button
               type="submit"
-              className="bg-[#072763] text-white font-bold rounded-md !px-11 py-4 !ml-15 cursor-pointer hover:bg-blue-800 transition duration-300 tracking-wider"
+              className="bg-[#072763] text-white font-bold rounded-md !px-11 !py-4 hover:bg-blue-800 transition duration-300 tracking-wider"
             >
               GENERATE
             </button>
