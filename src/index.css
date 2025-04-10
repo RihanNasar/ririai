@@ -5,3 +5,34 @@
   font-family: "Blinker", sans-serif;
   padding: 0;
 }
+/* Add this to your App.css */
+
+/* Pulsing animation for loading text */
+@keyframes textPulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}
+
+.loading-text-pulse {
+  animation: textPulse 2s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* For optimized canvas rendering */
+canvas {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: pixelated;
+}
